@@ -26,5 +26,17 @@
         ]
       }
     }
+  ],
+  "dataGroups": [
+    {
+      "name":"api-fresh",
+      "urls":["https://mocki.io/v1/0ff46399-23d5-43ad-b401-a17442726895"],
+      "cacheConfig": {
+        "strategy": "freshness",
+        "maxSize": 100,
+        "maxAge": "3d",
+        "timeout": "5s"
+      }
+    }
   ]
 }

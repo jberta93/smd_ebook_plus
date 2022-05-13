@@ -11,12 +11,16 @@ import {MatCardModule} from '@angular/material/card';
 import {MatListModule} from '@angular/material/list';
 import { MatDividerModule } from '@angular/material/divider';
 import {MatChipsModule} from '@angular/material/chips';
+import { BookDetailComponent } from './book-detail/book-detail.component';
+import { SafePipe } from './safe-pipe.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     SplashScreenComponent,
-    BookListComponent
+    BookListComponent,
+    BookDetailComponent,
+    SafePipe
   ],
   imports: [
     BrowserModule,
