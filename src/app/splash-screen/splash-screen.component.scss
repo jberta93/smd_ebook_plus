@@ -2,10 +2,6 @@
 
 .splash-screen {
   height: 100%;
-  background: url('/assets/img/splashscreen.webp');
-  //background: linear-gradient(to top, var.$primary-color, var.$secondary-color);
-  //background-blend-mode: darken;
-  background-size: cover;
 
   .title-container {
     position: absolute;
@@ -23,19 +19,7 @@
   .title {
     text-align: center;
     font-size: 50px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     font-weight: bold;
-  }
-
-  .button {
-    background: var.$primary-gradient;
-    min-width: 160px;
-    font-weight: 600;
-    border-radius: 30px;
-    display: inline-block;
-    font-size: 18px;
-    padding: 12px 16px;
-    border: none;
-    color: white;
   }
 }
