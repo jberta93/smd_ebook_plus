@@ -9,7 +9,7 @@ import { UpdateService } from './update.service';
 export class AppComponent {
   title = 'pwa-demo';
 
-   constructor(private updateService: UpdateService) {
-    
-   }
+  constructor(private updateService: UpdateService) {
+
+  }
 }

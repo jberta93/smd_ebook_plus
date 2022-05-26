@@ -7,20 +7,18 @@ import { environment } from '../environments/environment';
 import { SplashScreenComponent } from './splash-screen/splash-screen.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BookListComponent } from './book-list/book-list.component';
-import {MatCardModule} from '@angular/material/card';
-import {MatListModule} from '@angular/material/list';
+import { MatCardModule } from '@angular/material/card';
+import { MatListModule } from '@angular/material/list';
 import { MatDividerModule } from '@angular/material/divider';
-import {MatChipsModule} from '@angular/material/chips';
+import { MatChipsModule } from '@angular/material/chips';
 import { BookDetailComponent } from './book-detail/book-detail.component';
-import { SafePipe } from './safe-pipe.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     SplashScreenComponent,
     BookListComponent,
-    BookDetailComponent,
-    SafePipe
+    BookDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +30,7 @@ import { SafePipe } from './safe-pipe.pipe';
     BrowserAnimationsModule,
     MatListModule,
     MatCardModule,
-    MatDividerModule, 
+    MatDividerModule,
     MatChipsModule
   ],
   providers: [],

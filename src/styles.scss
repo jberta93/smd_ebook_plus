@@ -184,5 +184,21 @@ body {
   .book-plot {
     font-size: 14px;
   }
+
+  .book-arrow {
+    position: absolute;
+    font-size: 90px;
+    top: 350px;
+    padding: 0 20px;
+    cursor: pointer;
+    color: var.$primary-color;
+
+    &.prev {
+      left: 0;
+    }
+    &.next {
+      right: 0;
+    }
+  }
 }
 

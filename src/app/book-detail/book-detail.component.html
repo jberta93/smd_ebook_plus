@@ -1,6 +1,10 @@
 <mat-card *ngIf="book">
     <mat-card-title>{{ book.title }}</mat-card-title>
     <div class="book-author">{{ book.author }}</div>
-   
-    <!-- <embed type="text/xmldata" src="{{ book.url | safe }}" width="300" height="200"> -->
+
+    <div id="area"></div>
+    
+    <a id="prev" class="book-arrow prev" (click)="prev()">‹</a>
+    <a id="next" class="book-arrow next"  (click)="next()">›</a>
+    
 </mat-card>
