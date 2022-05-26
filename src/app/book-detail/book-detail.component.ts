@@ -19,7 +19,7 @@ export class BookDetailComponent implements OnInit {
   }
 
   getDetails(bookId: number) {
-    fetch('https://mocki.io/v1/0ff46399-23d5-43ad-b401-a17442726895').then((resp) => resp.json()).then(
+    fetch('http://141.94.220.228/books.json').then((resp) => resp.json()).then(
       (resp) => {
         this.book = resp.books.find((el: any) => el.id === bookId); // todo
         this.openBook();
@@ -31,7 +31,7 @@ export class BookDetailComponent implements OnInit {
   }
 
   openBook() {
-    this.epub = window.ePub('https://s3.amazonaws.com/epubjs/books/alice/OPS/package.opf'); // https://s3.amazonaws.com/epubjs/books/alice/OPS/package.opf 'https://s3.amazonaws.com/epubjs/books/moby-dick/OPS/package.opf'
+    this.epub = window.ePub(this.book.url);
 
     this.epub.loaded.spine.then (() => {
       this.rendition = this.epub.renderTo("area",{ flow: "paginated", width: "100%", height: "700px", allowScriptedContent: true });

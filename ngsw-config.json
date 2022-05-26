@@ -30,7 +30,7 @@
   "dataGroups": [
     {
       "name":"api-fresh",
-      "urls":["https://mocki.io/v1/0ff46399-23d5-43ad-b401-a17442726895"],
+      "urls":["http://141.94.220.228/books.json"],
       "cacheConfig": {
         "strategy": "freshness",
         "maxSize": 100,
