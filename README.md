@@ -25,3 +25,30 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Installare Angular PWA
+
+Angular PWA
+
+Per aggiungere un service worker al progetto: 
+- ng add @angular/pwa
+
+che: 
+- Aggiunge @angular/service-worker al package;
+- Crea il file ngsw-config.json che contiene le impostazioni e risorse da cachare;
+- Registra il service worker in app.module.js
+- Crea il file manifest.webmanifest che include informazioni che permettono di scaricare la web app e utilizzare come se fosse nativa.
+
+
+## Installare http-server
+
+npm install -g http-server
+
+## Creare componenti
+cd src/app
+ng generate component splash-screen
+ng generate component book-list
+ng generate component book-detail
+
+
+
