@@ -44,6 +44,9 @@ che:
 
 npm install -g http-server
 
+## Lanciare http server
+http-server -p 8080 -c-1 dist/pwa-demo 
+
 ## Creare componenti
 cd src/app
 ng generate component splash-screen
