@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { SwUpdate } from '@angular/service-worker';
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Injectable({
   providedIn: 'root'
@@ -7,7 +8,8 @@ import { SwUpdate } from '@angular/service-worker';
 
 export class UpdateService {
 
-  constructor(updates: SwUpdate) {
+  constructor(updates: SwUpdate, private snackBar: MatSnackBar) {
+    this.detectOffline();
     updates.versionUpdates.subscribe(evt => {
       switch (evt.type) {
         case 'VERSION_DETECTED':
@@ -22,5 +24,20 @@ export class UpdateService {
           break;
       }
     });
+  }
+
+  detectOffline() {
+    window.addEventListener('DOMContentLoaded', () => {
+      window.addEventListener('online',  ()=> this.toggleSnackbar(false));
+      window.addEventListener('offline', () => this.toggleSnackbar(true));
+    });
+  }
+
+  toggleSnackbar(showSnackbar: boolean) {
+    if(showSnackbar) this.snackBar.open("Sei offline!", undefined,  {
+      horizontalPosition: 'right',
+      verticalPosition: 'top',
+    });
+    else this.snackBar.dismiss();
   }
 }
