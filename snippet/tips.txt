@@ -1,0 +1,41 @@
+--- Splash Screen HTML
+<div class="splash-screen">
+  <div class="title-container">
+    <div class="title">Benvenuto in <br> E-BOOK+</div>
+    <a routerLink="/books" class="button">ACCEDI</a>
+  </div>
+</div>
+
+
+--- Book List HTML
+<mat-card class="book-list">
+    <mat-card-title>La tua libreria</mat-card-title>
+
+    <div *ngFor="let book of books">
+        <mat-divider></mat-divider>
+        <div role="listitem" class="book-item">
+            <strong class="book-title">{{ book.title }}</strong>
+            <div class="book-author">{{ book.author }}</div>
+            <div class="book-plot">{{ book.plot }}</div>
+            <div class="book-publication">{{ book.publication }}</div>
+
+            <a class="button" href="/detail/{{ book.id }}"> LEGGI </a>
+        </div>
+    </div>
+</mat-card>
+
+--- Book Detail HTML
+
+<mat-card *ngIf="book">
+    <mat-card-title>{{ book.title }}</mat-card-title>
+    <div class="book-author">{{ book.author }}</div>
+
+    <div id="area"></div>
+    
+    <a id="prev" class="book-arrow prev" (click)="prev()">‹</a>
+    <a id="next" class="book-arrow next"  (click)="next()">›</a>
+    
+</mat-card>
+<a href="/books" class="back-link">Torna indietro</a>
+
+
