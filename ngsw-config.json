@@ -22,15 +22,23 @@
       "resources": {
         "files": [
           "/assets/**",
-          "/*.(svg|cur|jpg|jpeg|png|apng|webp|avif|gif|otf|ttf|woff|woff2)"
+          "/*.(svg|cur|jpg|jpeg|png|apng|webp|avif|gif|opf|otf|ttf|woff|woff2|xhtml)"
+        ],
+        "urls": [
+          "https://fonts.gstatic.com/**",
+          "https://s3.amazonaws.com/**"
         ]
       }
     }
   ],
   "dataGroups": [
     {
-      "name":"api-fresh",
-      "urls":["http://141.94.220.228/books.json"],
+      "name": "api-fresh",
+      "urls": [
+        "http://141.94.220.228/books.json",
+        "https://cdn.jsdelivr.net/npm/epubjs/dist/epub.js",
+        "https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.5/jszip.min.js"
+      ],
       "cacheConfig": {
         "strategy": "freshness",
         "maxSize": 100,
