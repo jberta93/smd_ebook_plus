@@ -7,7 +7,7 @@ import { UpdateService } from './update.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'pwa-demo';
+  title = 'E-Book+';
 
   constructor(private updateService: UpdateService) {
 
